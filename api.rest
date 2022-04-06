@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/v1/sms/send
+Content-Type: application/json
+x-auth-token: {{$dotenv ACCESS_TOKEN}}
+
+{
+  "phone": "9819412655",
+  "message": "Hello World"
+}
