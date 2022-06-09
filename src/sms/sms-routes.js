@@ -1,17 +1,14 @@
-import { Router } from 'express';
+import { Router } from 'itty-router';
 import authenticate from '../middlewares/authenticate.js';
-import wrapAsyncHandler from '../utils/wrap-async.js';
-import * as smsValidators from './sms-validators.js';
-import validate from '../middlewares/validate.js';
 import * as smsHandlers from './sms-handlers.js';
 
-const router = Router();
+const router = Router({ base: '/api/v1/sms' });
 
+// prettier-ignore
 router.post(
   '/send',
   authenticate(),
-  validate(smsValidators.sendMessage),
-  wrapAsyncHandler(smsHandlers.sendMessage)
+  smsHandlers.sendMessage
 );
 
 export default router;

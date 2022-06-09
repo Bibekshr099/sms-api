@@ -1,4 +1,4 @@
-POST http://localhost:8080/api/v1/sms/send
+POST http://localhost:8787/api/v1/sms/send
 Content-Type: application/json
 x-auth-token: {{$dotenv ACCESS_TOKEN}}
 

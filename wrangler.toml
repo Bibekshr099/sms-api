@@ -1,0 +1,13 @@
+name = "sms-api"
+main = "src/app.js"
+compatibility_date = "2022-06-09"
+
+[vars]
+NODE_ENV="production"
+AWS_QUEUE_URL="https://sqs.us-east-1.amazonaws.com/452534848120/SMSQueue.fifo"
+AWS_QUEUE_REGION="us-east-1"
+
+# [secrets]
+# ACCESS_TOKEN
+# AWS_QUEUE_ACCESS_KEY_ID
+# AWS_QUEUE_SECRET_ACCESS_KEY
